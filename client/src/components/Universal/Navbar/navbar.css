@@ -1,0 +1,77 @@
+.navbar__main--menu {
+    display: flex;
+    background: var(--background);
+    border-bottom: solid 2.5px var(--primary);
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__main--menu__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__main--menu__logo--container img {
+    width: 8rem;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.navbar__main--menu__link--container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar__main--menu__link {
+    font-size: 1.25rem;
+}
+
+.navbar__main--menu__right {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 2.5px solid var(--primary);
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    border-radius: .5rem;
+}
+
+.navbar__main--menu__right svg {
+    height: 2rem;
+    width: auto;
+    margin: auto;
+    padding-right: 1rem;
+    padding-left: .25rem;
+}
+
+.navbar__main--menu__right p {
+    background: var(--primary);
+    color: var(--background);
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    padding: .5rem;
+    transition: .5s ease-in-out;
+}
+
+.navbar__main--menu__right svg path {
+    transition: .5s ease-in-out;
+}
+
+.navbar__main--menu__right:hover {
+    border: 2.5px solid var(--accent);
+}
+
+.navbar__main--menu__right:hover > p {
+    background: var(--accent);
+}
+
+.navbar__main--menu__right:hover > svg path {
+    stroke: var(--accent);
+}

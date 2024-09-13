@@ -7,7 +7,7 @@ export default function Navbar() {
             <div className='navbar__main--menu'>
                 <div className='navbar__main--menu__left'>
                     <a href='/' className='navbar__main--menu__logo--container'>
-                        <img src="/images/samuelsCoffeeWLogo.png" alt='Samuels Coffee Logo' />
+                        <img src="/images/samuelsCoffeeWLogoFull.png" alt='Samuels Coffee Logo' />
                     </a>
                     <div className='navbar__main--menu__link--container'>
                         <a className='navbar__main--menu__link' href='#'>Coffee</a>

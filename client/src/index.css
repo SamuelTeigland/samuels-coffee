@@ -1,12 +1,12 @@
 :root {
   --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   --background: #ebe9e3;
+  --secondary-background: #e7d5c5;
   --primary: #2b2b2b;
   --secondary: #c1d1a6;
   --accent: #805935;
   --text: #14120b;
 
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

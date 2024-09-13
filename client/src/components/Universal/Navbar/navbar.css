@@ -1,9 +1,13 @@
 .navbar__main--menu {
     display: flex;
-    background: var(--background);
+    background: var(--secondary-background);
     border-bottom: solid 2.5px var(--primary);
     justify-content: center;
     align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    position: sticky;
+    top: 0;
 }
 
 .navbar__main--menu__left {
@@ -14,7 +18,7 @@
 }
 
 .navbar__main--menu__logo--container img {
-    width: 8rem;
+    width: 12rem;
     height: auto;
     object-fit: contain;
     object-position: center;
@@ -29,6 +33,7 @@
 
 .navbar__main--menu__link {
     font-size: 1.25rem;
+    font-weight: 600;
 }
 
 .navbar__main--menu__right {

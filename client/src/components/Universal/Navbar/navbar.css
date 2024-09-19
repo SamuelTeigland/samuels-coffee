@@ -12,7 +12,7 @@
 
 .navbar__main--menu__left {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
 }
@@ -38,6 +38,9 @@
 
 .navbar__main--menu__right {
     margin-left: auto;
+}
+
+.navbar__cart--container {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -47,7 +50,7 @@
     border-radius: .5rem;
 }
 
-.navbar__main--menu__right svg {
+.navbar__cart--container svg {
     height: 2rem;
     width: auto;
     margin: auto;
@@ -55,7 +58,7 @@
     padding-left: .25rem;
 }
 
-.navbar__main--menu__right p {
+.navbar__cart--container p {
     background: var(--primary);
     color: var(--background);
     font-size: 1.25rem;
@@ -65,18 +68,149 @@
     transition: .5s ease-in-out;
 }
 
-.navbar__main--menu__right svg path {
+.navbar__cart--container svg path {
     transition: .5s ease-in-out;
 }
 
-.navbar__main--menu__right:hover {
+.navbar__cart--container:hover {
     border: 2.5px solid var(--accent);
 }
 
-.navbar__main--menu__right:hover > p {
+.navbar__cart--container:hover > p {
     background: var(--accent);
 }
 
-.navbar__main--menu__right:hover > svg path {
+.navbar__cart--container:hover > svg path {
     stroke: var(--accent);
+}
+
+.navbar__hamburger--container {
+    display: none;
+}
+
+.navbar__small--menu {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .navbar__main--menu {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    .navbar__main--menu__left {
+        width: 100%;
+        display: block;
+    }
+
+    .navbar__main--menu__link--container {
+        display: none;
+    }
+
+    .navbar__cart--container {
+        display: none;
+    }
+
+    .navbar__hamburger--container {
+        display: block;
+    }
+
+    .navbar__hamburger--container svg {
+        height: 4rem;
+        cursor: pointer;
+        width: auto;
+    }
+
+    .navbar__hamburger--container svg path {
+        stroke: var(--primary);
+        transition: .5s;
+    }
+
+    .navbar__hamburger--container:hover > svg path {
+        stroke: var(--accent);
+    }
+
+    .navbar__hidden {
+        display: none;
+    }
+    
+    .navbar__shown {
+        display: block;
+    }
+
+    .navbar__small--menu {
+        background: var(--primary);
+    }
+
+    .navbar__small--link__container {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: center;
+        justify-content: center;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        width: 95%;
+        margin: auto;
+    }
+
+    .navbar__small--link {
+        color: var(--secondary-background);
+        font-size: 2rem;
+        padding: 1rem;
+        width: 95%;
+        border-bottom: 2.5px solid var(--secondary-background);
+        font-weight: 600;
+    }
+
+    .navbar__small--link:hover {
+        background: var(--secondary);
+        border-bottom: 2.5px solid var(--secondary);
+    }
+
+    .navbar__cart--link {
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+        padding: 1rem;
+        width: 95%;
+        border-bottom: 2.5px solid var(--secondary-background);
+        transition: .5s;
+    }
+
+    .navbar__cart--link:hover {
+        background: var(--secondary)
+    }
+
+    .navbar__cart--subcontainer {
+        width: 100%;
+        margin: auto;
+    }
+
+    .navbar__cart--subcontainer h3 {
+        text-align: left;
+        color: var(--secondary-background);
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .navbar__cart--subcontainer svg {
+        height: 3rem;
+    }
+
+    .navbar__cart--subcontainer svg path {
+        stroke: var(--secondary-background)
+    }
+
+    .navbar__cart--subcontainer p {
+        color: var(--secondary-background);
+        font-size: 2rem;
+        text-align: right;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar__hamburger--container svg {
+        height: 3rem;
+    }
 }

@@ -1,7 +1,10 @@
 import './navbar.css';
-import { Cart } from '../../../icons/icons'
+import { Cart, Hamburger } from '../../../icons/icons'
+import { useState } from 'react';
 
 export default function Navbar() {
+    const [ visible, isVisible ] = useState(false);
+
     return (
         <div className='navbar__container'>
             <div className='navbar__main--menu'>
@@ -18,12 +21,47 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div className='navbar__main--menu__right'>
-                    <Cart />
-                    <p>0</p>
+                    <a href='#' className='navbar__cart--container'>
+                        <Cart />
+                        <p>0</p>
+                    </a>
+                    <div className='navbar__hamburger--container' onClick={() => {
+                        isVisible(!visible);
+                    }}>
+                        <Hamburger />
+                    </div>
                 </div>
             </div>
-            <div>
 
+
+            <div className={ visible === true ? 'navbar__small--menu navbar__shown' : 'navbar__small--menu navbar__hidden'}>
+                <div className='navbar__small--link__container'>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__small--link' href='#'>Coffee</a>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__small--link' href='#'>Best Sellers</a>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__small--link' href='#'>About Us</a>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__small--link' href='#'>Contact Us</a>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__small--link' href='#'>Account</a>
+                    <a onClick={() => {
+                        isVisible(!visible);
+                    }} className='navbar__cart--link'>
+                        <div className='navbar__cart--subcontainer'>
+                            <h3>Cart</h3>
+                        </div>
+                        <div className='navbar__cart--subcontainer'>
+                            <p>0</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     )

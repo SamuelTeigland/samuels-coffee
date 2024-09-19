@@ -4,6 +4,7 @@
   --secondary-background: #e7d5c5;
   --primary: #2b2b2b;
   --secondary: #c1d1a6;
+  --tertiary: #6b8047;
   --accent: #805935;
   --text: #14120b;
 
@@ -17,6 +18,7 @@
   padding: auto;
   scroll-behavior: smooth;
   font-family: var(--font-family);
+  overflow-x: hidden;
 }
 
 html {
@@ -33,4 +35,45 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+button {
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: .5rem;
+  transition: .5s ease-in-out;
+}
+
+.button__primary {
+  border: .15rem solid var(--primary);
+  color: var(--primary);
+  background: transparent;
+  box-shadow: .1rem .1rem 1rem transparent;
+}
+
+.button__primary:hover {
+  box-shadow: .1rem .1rem 1rem var(--primary);
+}
+
+.button__secondary {
+  color: var(--background);
+  background: var(--text);
+  border: .15rem solid var(--text);
+  box-shadow: .1rem .1rem 1rem transparent;
+}
+
+.button__secondary:hover {
+  box-shadow: .1rem .1rem 1rem var(--text);
+}
+
+.button__tertiary {
+  color: var(--text);
+  background: var(--tertiary);
+  border: .15rem solid var(--tertiary);
+  box-shadow: .1rem .1rem 1rem transparent;
+}
+
+.button__tertiary:hover {
+  box-shadow: .1rem .1rem 1rem var(--tertiary);
 }
